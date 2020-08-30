@@ -2,7 +2,7 @@
 import port_scanner
 from unittest import main
 
-ports = port_scanner.get_open_ports("http://gshhdsshjgghjas", [75,85])
+ports = port_scanner.get_open_ports("300.26.10.78", [8079, 8090])
 print("Open ports:", ports)
 
 # Called with URL
@@ -22,6 +22,9 @@ ports = port_scanner.get_open_ports("137.74.187.104", [440, 450], True)
 print(ports + '\n')
 
 # Verbose called with host name -- multiple ports returned
+ports = port_scanner.get_open_ports("scanme.nmap", [20, 80])
+print(ports + '\n')
+
 ports = port_scanner.get_open_ports("scanme.nmap.org", [20, 80], True)
 print(ports + '\n')
 
